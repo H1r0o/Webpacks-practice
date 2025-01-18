@@ -18,16 +18,18 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                test: /\.(png|jpe?g|gif|svg)$/i, // Obsługa obrazów
+                type: 'asset/resource', // Zastępuje `file-loader`
             },
+            {
+                test: /\.css$/i, // Obsługa stylów
+                use: ['style-loader', 'css-loader'],
+            },
+
         ],
     },
     devServer: {
-        static: {
-            directory: path.join(__dirname, 'public'),
-        },
-        compress: true,
-        port: 9000,
+        static: './dist', // Serwer dla plików statycznych
     },
+    mode: 'development', // Tryb: 'development' lub 'production'
 };

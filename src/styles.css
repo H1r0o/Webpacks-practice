@@ -1,5 +1,5 @@
 body {
-    background-color: aquamarine;
+    background-color: rgba(236, 69, 69, 0.603);
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
@@ -44,9 +44,21 @@ button {
     border: 10px solid rgba(0, 0, 0, 0.548);
     border-radius: 20px;
     padding: 20px;
+    background-color: aliceblue;
 }
 
 #content>h3 {
     font-size: 1.5rem;
     font-weight: 800;
+}
+
+img {
+    width: 90%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+img+p {
+    width: 90%;
+    font-weight: 500;
 }

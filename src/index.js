@@ -1,5 +1,5 @@
 // index.js
-
+import img from "./asset/burgerImg.jpg";
 import "./styles.css";
 import { homePage } from "./homePage";
 import { menuPage } from "./menuPage.js";
@@ -9,10 +9,14 @@ const content = document.querySelector("#content");
 const homeBtn = document.querySelector("#home");
 const menuBtn = document.querySelector("#menu");
 const aboutBtn = document.querySelector("#about");
-
+const imgContainer = document.createElement("img");
+imgContainer.src = img;
+imgContainer.width = 300;
+content.appendChild(imgContainer);
 
 content.innerHTML = "";
 homePage(content);
+homeBtn.classList.add("active");
 homeBtn.addEventListener("click", () => {
     content.innerHTML = "";
     homePage(content);
